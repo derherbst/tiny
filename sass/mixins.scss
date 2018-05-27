@@ -1,0 +1,70 @@
+@mixin font($fs, $lh, $fw) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin on-center($w, $mrgn) {
+  width: $w;
+  margin: $mrgn;
+}
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (max-width: 75em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (max-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (max-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (max-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobile {
+     @media (max-width: 37.5em)  { @content ; }
+
+  }
+}
+
+//@mixin mobile {
+//  @media (max-width: $mobile-width) {
+//    @content
+//  }
+//}
+//
+//@mixin tablet {
+//  @media (max-width: $tablet-width) {
+//    @content
+//  }
+//}
+//
+//@mixin desktop {
+//  @media (max-width: $desktop-width) {
+//    @content
+//  }
+//}
+
+//@mixin on-center() {
+//  @media (max-width: $mobile-width) {
+//    width: 260px;
+//    margin: 0 auto;
+//  }
+//  @media (max-width: $tablet-width) {
+//    width: 668px;
+//    margin: 0 auto;
+//  }
+//  @media (max-width: $desktop-width) {
+//    width: 1050px;
+//    margin: 0 auto;
+//  }
+//}
