@@ -2,9 +2,30 @@ doctype html
 head
 	title 'qwe qweqe'
 	link(href='/css/style.css', rel='stylesheet', type="text/css")
+	script(src='/js/fontawesome-all.min.js' defer)
 body
-	header.header
-		.header_inner
-			a.main-logo
-				img(src='../../img/db-logo.png')
+	header.page-header
+		.page-header__inner
+			.page-header__top
+				a.main-logo
+					img(src='../../img/db-logo.png')
+				nav.main-nav
+					ul.main-nav__list
+						li.main-nav__item
+							a.main-nav__link
+						li.main-nav__item
+							a.main-nav__link
+						li.main-nav__item
+							a.main-nav__link
+						li.main-nav__item
+							a.main-nav__link
+						li.main-nav__item
+							a.main-nav__link
+						li.main-nav__item
+							a.main-nav__create
+			.introduction
+				.introduction__inner
+					p.introduction__head To Make Your Life Easier Take a Card
+					p.introduction__caption There are many variations of passages of Lorem Ipsum available, but the majority have suffered There are many variations of passages of Lorem Ipsum randomised words which don't look even slightly believable.
+					a.introduction__apply-btn
 	main.main

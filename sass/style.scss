@@ -1,13 +1,5 @@
-body {
-  background: darkGreen;
-  color: antiquewhite;
-}
-.header {
-  height: 200px;
-  width: 200px;
-}
-
-.main-logo {
-	heigh: 100px;
-	width: 100px;
-}
+@import 'normalize.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global/fonts.scss';
+@import 'global/layout.scss'
