@@ -78,7 +78,9 @@ module.exports = {
              * Example: {$: "jquery"} or {React: 'react'}
              * @type {Object}
              */
-            providePlugin: {}
+            providePlugin: {
+                $: 'jquery',
+            }
         },
 
         /**
