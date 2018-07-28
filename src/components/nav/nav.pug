@@ -1,0 +1,6 @@
+nav.nav
+    ul.nav__list
+        - var menuItems = ['Cards', 'Service', 'Banking', 'Faq', 'Contacts', 'Create Account']
+        each item in menuItems
+            li.nav__item
+                a.nav__link= item

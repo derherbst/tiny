@@ -4,30 +4,8 @@ head
 	link(href='/css/style.css', rel='stylesheet', type="text/css")
 	script(src='/js/fontawesome-all.min.js' defer)
 body
-	header.page-header
-		.page-header__inner
-			.page-header__top
-				a.main-logo
-					img(src='../../img/db-logo.png')
-				nav.main-nav
-					ul.main-nav__list
-						li.main-nav__item
-							a.main-nav__link Cards
-						li.main-nav__item
-							a.main-nav__link Service
-						li.main-nav__item
-							a.main-nav__link Banking
-						li.main-nav__item
-							a.main-nav__link Faq
-						li.main-nav__item
-							a.main-nav__link Contacts
-						li.main-nav__item
-							a.main-nav__create Create Account
-			.introduction
-				.introduction__inner
-					p.introduction__head To Make Your Life Easier Take a Card
-					p.introduction__caption There are many variations of passages of Lorem Ipsum available, but the majority have suffered There are many variations of passages of Lorem Ipsum randomised words which don't look even slightly believable.
-					a.introduction__apply-btn
+	include ../template/header/header
+	include ../components/hero/hero
 	main.main
 		section.section.section__process
 			.section__content
