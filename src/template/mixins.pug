@@ -1,0 +1,5 @@
+mixin list(items, classy)
+    ul(class=classy)
+        each item in items
+            li(class=classy+'__item')
+                a(class=classy+'__link')= item
