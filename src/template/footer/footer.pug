@@ -1,2 +1,49 @@
-mixin footer(data)
-    footer.footer
+footer.footer
+    .footer__container
+        .footer__panel
+            .footer__col
+                include ../../components/logo/logo
+                .footer__text I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder connection society.
+                .footer__contacts
+                    .footer__contact
+                        span P:
+                        span +6985 7458 423
+                    .footer__contact
+                        span E:
+                        a(href='mailto:bankingsave@gmail.com') bankingsave@gmail.com
+                    .footer__contact
+                        span Address:
+                        span 486 Wilson Street, Irvine, CA 92614
+            .footer__col
+                h3.footer__col-title Comminute
+                ul.footer__list
+                    li.footer__list-item facebook
+                    li.footer__list-item instagram
+                    li.footer__list-item twitter
+                    li.footer__list-item pinterest
+                    li.footer__list-item linkedin
+                    li.footer__list-item youtube
+            .footer__col
+                h3.footer__col-title Useful Link
+                ul.footer__list
+                    li.footer__list-item Cards
+                    li.footer__list-item Services
+                    li.footer__list-item Banking
+                    li.footer__list-item FAQ
+                    li.footer__list-item Blog
+                    li.footer__list-item Contact
+            .footer__col
+                h3.footer__col-title Subscribe Newsletter
+                form(method='post' autocomplete='off' target='_blank')
+                    span.footer__form-field
+                        input(type='email' id='subscription-email' placeholder='Эл.&nbsp;почта')
+                    input(type="submit" name="subscribe" value="Подписаться")
+                h3.footer__col-title
+                    .footer__photos
+                        span.footer__photo
+                        span.footer__photo
+                        span.footer__photo
+                        span.footer__photo
+                        span.footer__photo
+        .footer__copyright
+            span Copyright @ Digital Marketing. AllRight Reseverd

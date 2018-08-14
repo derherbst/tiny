@@ -1,10 +1,9 @@
 doctype html
 head
 	title Digital Banking
-	link(href='/css/style.css', rel='stylesheet', type="text/css")
-	script(src='/js/fontawesome-all.min.js' defer)
+	link(href='static/css/style.css', rel='stylesheet')
+	script(src='minjs/fontawesome-all.min.js')
 body
-	include ../template/mixins
 	include ../template/header/header
 	include ../components/hero/hero
 	main.main
@@ -14,3 +13,11 @@ body
 		include ../components/benefits/benefits
 
 		include ../components/service/service
+
+		include ../components/card-types/card-types
+
+		include ../components/stats/stats
+
+		include ../components/questions/questions
+
+		include ../template/footer/footer

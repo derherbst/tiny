@@ -1,0 +1,17 @@
+section.meassage
+    .message__container
+        .message__header
+            h2 Your message
+        form(method='POST').message__form
+            .message__form-block
+                .message__field
+                    input(type='text' placeholder='Your Name')
+                .message__field
+                    input(type='email' placeholder='Email Address')
+                .message__field
+                    input(type='text' placeholder='Subject')
+            .message__form-block
+                .message__field
+                    textarea(placeholder='Message')
+                .message__field.btn.btn--message
+                    input(type='submit' value='Submit')

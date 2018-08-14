@@ -1,5 +1,12 @@
-mixin list(items, classy)
-    ul(class=classy)
-        each item in items
-            li(class=classy+'__item')
-                a(class=classy+'__link')= item
+mixin list(items, classy, uL)
+    if uL === 'nav'
+        ul(class=classy)
+            each item, index in items
+                li(class=classy+'__item')
+                    a(class=classy+'__link')= item
+    else if uL === 'list'
+        div(class=classy + '__list')
+            each item, index in items
+                div(class=classy + '__item')
+                    span(class=classy + '__name')= item
+                    p(class=classy + '__text')= item
