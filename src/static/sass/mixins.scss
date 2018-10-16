@@ -35,36 +35,37 @@
 
   }
 }
+/*
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content
+  }
+}
 
-//@mixin mobile {
-//  @media (max-width: $mobile-width) {
-//    @content
-//  }
-//}
-//
-//@mixin tablet {
-//  @media (max-width: $tablet-width) {
-//    @content
-//  }
-//}
-//
-//@mixin desktop {
-//  @media (max-width: $desktop-width) {
-//    @content
-//  }
-//}
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content
+  }
+}
 
-//@mixin on-center() {
-//  @media (max-width: $mobile-width) {
-//    width: 260px;
-//    margin: 0 auto;
-//  }
-//  @media (max-width: $tablet-width) {
-//    width: 668px;
-//    margin: 0 auto;
-//  }
-//  @media (max-width: $desktop-width) {
-//    width: 1050px;
-//    margin: 0 auto;
-//  }
-//}
+@mixin desktop {
+  @media (max-width: $desktop-width) {
+    @content
+  }
+}
+
+@mixin on-center() {
+  @media (max-width: $mobile-width) {
+    width: 260px;
+    margin: 0 auto;
+  }
+  @media (max-width: $tablet-width) {
+    width: 668px;
+    margin: 0 auto;
+  }
+  @media (max-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+*/
