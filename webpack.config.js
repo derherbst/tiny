@@ -1,22 +1,30 @@
 // для того, чтобы прописать абсолютный путь
 let path = require('path');
+let webpack = require('webpack');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: ['./src/index.js'],
+    // entry: {
+	// 	bundle: './src/index.js' // здесь добавляем точки входа. имя свойства будет использовано в output -> filename
+	// },
+
+	entry: ['./src/index.js'], // здесь добавляем точки входа. имя свойства будет использовано в output -> filename
 
 	mode: 'development',
 
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js',
+        // filename: '[name].[chunkhash].js', // name берется из entry
+        filename: 'bundle.js', // name берется из entry
         publicPath: 'dist/'
     },
 
 	watch: true,
 
 	devServer: {
-        overlay: false
+        port: 8081,
+		contentBase: path.resolve(__dirname, './dist')
     },
     module: {
         rules: [
@@ -52,10 +60,19 @@ module.exports = {
 	        }
         ]
     },
+
 	plugins: [
 		new ExtractTextPlugin({ // define where to save the file
 			filename: './static/css/[name].bundle.css', // now output for css bundle is => dist/static/css
 		}),
+		new HtmlWebpackPlugin({
+			template: './src/index.html'
+		}),
 	],
+
+	resolve: {
+    	extensions: ['.js', '.json', '.jsx', '*'] // чтобы вэбпак понимал расширение .jsx
+	},
+
     devtool: "eval-sourcemap"
 };
