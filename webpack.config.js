@@ -39,6 +39,10 @@ module.exports = {
                 }
 
             },
+	        {
+		        test: /\.pug$/,
+		        use: ["raw-loader", "pug-html-loader"] // Please use raw loader in order to get the content string
+	        },
 	        { // sass / scss loader for webpack
 		        test: /\.s?css$/,
 		        use: ExtractTextPlugin.extract(
@@ -66,7 +70,7 @@ module.exports = {
 			filename: './static/css/[name].bundle.css', // now output for css bundle is => dist/static/css
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/index.html'
+			template: './src/pages/index.pug'
 		}),
 	],
 
