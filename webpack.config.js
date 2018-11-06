@@ -3,8 +3,9 @@ let path = require('path');
 let webpack = require('webpack');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let template = require('./src /pages/index.pug');
 
-module.exports = {
+let conf = {
     // entry: {
 	// 	bundle: './src/index.js' // здесь добавляем точки входа. имя свойства будет использовано в output -> filename
 	// },
@@ -33,15 +34,15 @@ module.exports = {
 	            exclude: /node_modules/,
                 use: {
 	                loader: "babel-loader",
-	                options: {
-	                    presets: ['env', 'stage-0']
-                    }
+                    // options: {
+	                 //    presets: ['env', 'stage-0']
+                    // }
                 }
 
             },
 	        {
 		        test: /\.pug$/,
-		        use: ["raw-loader", "pug-html-loader"] // Please use raw loader in order to get the content string
+		        use: ["raw-loader", "pug-html-loader", "file-loader?name=[path][name].html", "extract-loader", "html-loader"] // Please use raw loader in order to get the content string
 	        },
 	        { // sass / scss loader for webpack
 		        test: /\.s?css$/,
@@ -70,13 +71,21 @@ module.exports = {
 			filename: './static/css/[name].bundle.css', // now output for css bundle is => dist/static/css
 		}),
 		new HtmlWebpackPlugin({
+			// filename: 'index.html',
 			template: './src/pages/index.pug'
 		}),
 	],
 
 	resolve: {
     	extensions: ['.js', '.json', '.jsx', '*'] // чтобы вэбпак понимал расширение .jsx
-	},
-
-    devtool: "eval-sourcemap"
+	}
 };
+
+module.exports = (env, options) => {
+
+	let production = options.mode === 'production';
+
+	conf.devtool = production ? 'source-map' : 'eval-sourcemap';
+
+	return conf;
+}
