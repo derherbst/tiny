@@ -1,8 +1,8 @@
 {
-  "name": "marta",
+  "name": "",
   "version": "1.0.0",
-  "description": "portfolio website for Marta",
-  "main": "gulpfile.js",
+  "description": "",
+  "main": "webpack.config.js",
   "dependencies": {
     "aliases": "^1.0.0",
     "babel-preset-stage-0": "^6.24.1",
